@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Wsdl2PhpGenerator\Console;
-
 
 use Psr\Log\AbstractLogger;
 use Symfony\Component\Console\Output\Output;
@@ -32,9 +30,9 @@ class OutputLogger extends AbstractLogger
     /**
      * Logs with an arbitrary level.
      *
-     * @param mixed $level
-     * @param string $message
-     * @param array $context
+     * @param  mixed  $level
+     * @param  string $message
+     * @param  array  $context
      * @return void
      */
     public function log($level, $message, array $context = array())

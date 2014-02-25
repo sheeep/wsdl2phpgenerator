@@ -23,9 +23,9 @@ class Pattern extends Type
     /**
      * Construct the object
      *
-     * @param ConfigInterface $config The configuration
-     * @param string $name The identifier for the class
-     * @param string $restriction The restriction(datatype) of the values
+     * @param ConfigInterface $config      The configuration
+     * @param string          $name        The identifier for the class
+     * @param string          $restriction The restriction(datatype) of the values
      */
     public function __construct(ConfigInterface $config, $name, $restriction)
     {

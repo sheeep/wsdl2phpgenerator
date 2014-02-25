@@ -52,10 +52,10 @@ class Service
     private $types;
 
     /**
-     * @param ConfigInterface $config Configuration
-     * @param string $identifier The name of the service
-     * @param array $types The types the service knows about
-     * @param string $description The description of the service
+     * @param ConfigInterface $config      Configuration
+     * @param string          $identifier  The name of the service
+     * @param array           $types       The types the service knows about
+     * @param string          $description The description of the service
      */
     public function __construct(ConfigInterface $config, $identifier, array $types, $description)
     {
@@ -172,7 +172,7 @@ class Service
      * Adds an operation to the service
      *
      * @param string $name
-     * @param array $params
+     * @param array  $params
      * @param string $description
      * @param string $returns
      */

@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Wsdl2PhpGenerator\Console;
 
 use Symfony\Component\Console\Application as SymfonyApplication;
@@ -52,6 +51,7 @@ class Application extends SymfonyApplication
     protected function getCommandName(InputInterface $input)
     {
         $command = new GenerateCommand();
+
         return $command->getName();
     }
 
@@ -73,4 +73,4 @@ class Application extends SymfonyApplication
 
         return $inputDefinition;
     }
-} 
+}

@@ -25,9 +25,9 @@ class Enum extends Type
     /**
      * Construct the object
      *
-     * @param ConfigInterface $config The configuration
-     * @param string $name The identifier for the class
-     * @param string $restriction The restriction(datatype) of the values
+     * @param ConfigInterface $config      The configuration
+     * @param string          $name        The identifier for the class
+     * @param string          $restriction The restriction(datatype) of the values
      */
     public function __construct(ConfigInterface $config, $name, $restriction)
     {
@@ -74,7 +74,7 @@ class Enum extends Type
      * Adds the value, typechecks strings and integers.
      * Otherwise it only checks so the value is not null
      *
-     * @param mixed $value The value to add
+     * @param  mixed                    $value The value to add
      * @throws InvalidArgumentException if the value doesn'nt fit in the restriction
      */
     public function addValue($value)

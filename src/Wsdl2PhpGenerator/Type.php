@@ -45,9 +45,9 @@ abstract class Type
     /**
      * The minimum construction
      *
-     * @param ConfigInterface $config The configuration
-     * @param string $name The identifier for the type
-     * @param string $datatype The restriction(DataType)
+     * @param ConfigInterface $config   The configuration
+     * @param string          $name     The identifier for the type
+     * @param string          $datatype The restriction(DataType)
      */
     public function __construct(ConfigInterface $config, $name, $datatype)
     {

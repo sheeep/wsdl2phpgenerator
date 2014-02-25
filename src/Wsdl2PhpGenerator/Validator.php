@@ -103,7 +103,7 @@ class Validator
     /**
      * Changes the name if it is invalid to a valid name
      *
-     * @param string $name The name to validate
+     * @param  string $name The name to validate
      * @return string Returns the validated name
      */
     public static function validateClass($name)
@@ -117,7 +117,7 @@ class Validator
     }
 
     /**
-     * @param string $name The name to validate
+     * @param  string $name The name to validate
      * @return string The validated name
      */
     public static function validateType($name)
@@ -128,7 +128,7 @@ class Validator
     /**
      * Validates a name against standard PHP naming conventions
      *
-     * @param string $name the name to validate
+     * @param  string $name the name to validate
      * @return string the validated version of the submitted name
      */
     public static function validateNamingConvention($name)
@@ -144,8 +144,8 @@ class Validator
     /**
      * Checks if $str is a primitive datatype
      *
-     * @param string $str
-     * @return bool True if $str is a primitive
+     * @param  string $str
+     * @return bool   True if $str is a primitive
      */
     public static function isPrimitive($str)
     {
@@ -156,8 +156,8 @@ class Validator
      * Validates a class name against PHP naming conventions and already defined
      * classes, and optionally stores the class as a member of the interpreted classmap.
      *
-     * @param string $className the name of the class to test
-     * @return string The validated version of the submitted class name
+     * @param  string              $className the name of the class to test
+     * @return string              The validated version of the submitted class name
      * @throws ValidationException
      */
     private static function validateClassName($className)
@@ -179,7 +179,7 @@ class Validator
      * Validates an operation against PHP naming conventions for methods.
      *
      * @param $operationName The operation name to validate.
-     * @return string The validated version of the operation name.
+     * @return string              The validated version of the operation name.
      * @throws ValidationException
      */
     private static function validateOperationName($operationName)
@@ -199,8 +199,8 @@ class Validator
      * Validates a wsdl type against known PHP primitive types, or otherwise
      * validates the namespace of the type to PHP naming conventions
      *
-     * @param string $type the type to test
-     * @return string the validated version of the submitted type
+     * @param  string              $type the type to test
+     * @return string              the validated version of the submitted type
      * @throws ValidationException
      */
     private static function validateTypeName($type)
@@ -255,8 +255,8 @@ class Validator
     /**
      * Checks if $str is a restricted keyword
      *
-     * @param string $str
-     * @return bool True if $str is a restricted keyword
+     * @param  string $str
+     * @return bool   True if $str is a restricted keyword
      */
     public static function isKeyword($str)
     {

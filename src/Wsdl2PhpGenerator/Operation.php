@@ -37,7 +37,7 @@ class Operation
     /**
      *
      * @param string $name
-     * @param array $paramStr The parameter string for a operation from the wsdl
+     * @param array  $paramStr    The parameter string for a operation from the wsdl
      * @param string $description
      * @param string $returns
      */
@@ -76,7 +76,7 @@ class Operation
     }
 
     /**
-     * @param Type[] $validTypes An array of Type objects with valid types for typehinting
+     * @param  Type[] $validTypes An array of Type objects with valid types for typehinting
      * @return string A parameter string
      */
     public function getParamString(array $validTypes)
@@ -112,9 +112,9 @@ class Operation
 
     /**
      *
-     * @param string $name The param to get
+     * @param  string $name The param to get
      * @param array An array of Type objects with valid types for typehinting
-     * @return array A array with three keys 'type' => the typehint to use 'name' => the name of the param and 'desc' => A description of the param
+     * @return array  A array with three keys 'type' => the typehint to use 'name' => the name of the param and 'desc' => A description of the param
      */
     public function getPhpDocParams($name, array $validTypes)
     {

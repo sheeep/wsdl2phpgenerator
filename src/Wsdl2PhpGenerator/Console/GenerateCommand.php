@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Wsdl2PhpGenerator\Console;
 
 use Symfony\Component\Console\Command\Command;
@@ -223,15 +222,14 @@ class GenerateCommand extends Command
         $this->generator = $generator;
     }
 
-
     /**
      * Adds an argument where the value maps to a generator configuration.
      *
-     * @param string $name The argument name
-     * @param integer $mode The argument mode: InputArgument::REQUIRED or InputArgument::OPTIONAL
-     * @param string $description A description text
-     * @param mixed $default The default value (for InputArgument::OPTIONAL mode only)
-     * @param string|callable $configMapping The name of the configuration value to map the argument value to.
+     * @param  string          $name          The argument name
+     * @param  integer         $mode          The argument mode: InputArgument::REQUIRED or InputArgument::OPTIONAL
+     * @param  string          $description   A description text
+     * @param  mixed           $default       The default value (for InputArgument::OPTIONAL mode only)
+     * @param  string|callable $configMapping The name of the configuration value to map the argument value to.
      * @return GenerateCommand The current instance
      */
     protected function addConfigArgument(
@@ -242,19 +240,20 @@ class GenerateCommand extends Command
         $configMapping = null
     ) {
         $this->setConfigMapping($name, $configMapping);
+
         return $this->addArgument($name, $mode, $description, $default);
     }
 
     /**
      * Adds an option where the value maps to a generator configuration.
      *
-     * @param string $name The option name
-     * @param string $shortcut The shortcut (can be null)
-     * @param integer $mode The option mode: One of the InputOption::VALUE_* constants
-     * @param string $description A description text
-     * @param mixed $default The default value (must be null for InputOption::VALUE_REQUIRED or InputOption::VALUE_NONE)
-     * @param string|callable $configMapping The name of the configuration value to map the argument value to or an
-     *  anonymous function which performs the mapping.
+     * @param  string          $name          The option name
+     * @param  string          $shortcut      The shortcut (can be null)
+     * @param  integer         $mode          The option mode: One of the InputOption::VALUE_* constants
+     * @param  string          $description   A description text
+     * @param  mixed           $default       The default value (must be null for InputOption::VALUE_REQUIRED or InputOption::VALUE_NONE)
+     * @param  string|callable $configMapping The name of the configuration value to map the argument value to or an
+     *                                        anonymous function which performs the mapping.
      * @return GenerateCommand The current instance
      */
     protected function addConfigOption(
@@ -266,16 +265,17 @@ class GenerateCommand extends Command
         $configMapping = null
     ) {
         $this->setConfigMapping($name, $configMapping);
+
         return $this->addOption($name, $shortcut, $mode, $description, $default);
     }
 
     /**
-     * @param string $name
-     * @param string $shortcut
-     * @param integer $mode
-     * @param string $description
-     * @param mixed $default
-     * @param string $cache
+     * @param  string          $name
+     * @param  string          $shortcut
+     * @param  integer         $mode
+     * @param  string          $description
+     * @param  mixed           $default
+     * @param  string          $cache
      * @return GenerateCommand
      */
     protected function addCacheOption(
@@ -291,16 +291,17 @@ class GenerateCommand extends Command
                 $config->setWsdlCache($cache);
             }
         };
+
         return $this->addConfigOption($name, $shortcut, $mode, $description, $default, $cacheMapping);
     }
 
     /**
-     * @param string $name
-     * @param string $shortcut
-     * @param integer $mode
-     * @param string $description
-     * @param mixed $default
-     * @param string $feature
+     * @param  string          $name
+     * @param  string          $shortcut
+     * @param  integer         $mode
+     * @param  string          $description
+     * @param  mixed           $default
+     * @param  string          $feature
      * @return GenerateCommand
      */
     protected function addFeatureOption(
@@ -318,6 +319,7 @@ class GenerateCommand extends Command
                 $config->setOptionFeatures(array_unique($options));
             }
         };
+
         return $this->addConfigOption($name, $shortcut, $mode, $description, $default, $featureMapping);
     }
 

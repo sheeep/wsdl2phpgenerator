@@ -70,7 +70,7 @@ class DocumentationManager
     }
 
     /**
-     * @param string $function The name of the function
+     * @param string $function    The name of the function
      * @param string $description The documentation
      */
     public function setFunctionDescription($function, $description)
@@ -79,7 +79,7 @@ class DocumentationManager
     }
 
     /**
-     * @param string $function
+     * @param  string $function
      * @return string
      */
     public function getFunctionDescription($function)
@@ -87,6 +87,7 @@ class DocumentationManager
         if (isset($this->functionDescriptions[$function])) {
             return $this->functionDescriptions[$function];
         }
+
         return '';
     }
 }

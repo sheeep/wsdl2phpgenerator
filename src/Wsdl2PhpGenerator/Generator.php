@@ -79,7 +79,6 @@ class Generator implements GeneratorInterface
      */
     private $logger;
 
-
     /**
      * Construct the generator
      */
@@ -116,7 +115,6 @@ class Generator implements GeneratorInterface
 
         $this->log('Generation complete', 'info');
     }
-
 
     /**
      * Load the wsdl file into php
@@ -392,7 +390,7 @@ class Generator implements GeneratorInterface
     /**
      * Takes a string and removes the xml namespace if any
      *
-     * @param string $str
+     * @param  string $str
      * @return string The string without namespace
      */
     private function cleanNamespace($str)
@@ -408,7 +406,7 @@ class Generator implements GeneratorInterface
     /**
      * Parses the type schema for a type with the name $name
      *
-     * @param string $name
+     * @param  string          $name
      * @return DOMElement|null Returns the type node with the name $name if it finds it. Null otherwise.
      */
     private function findTypenode($name)
@@ -450,7 +448,6 @@ class Generator implements GeneratorInterface
         return $typenode;
     }
 
-
     /*
      * Setters/getters
      */
@@ -473,7 +470,6 @@ class Generator implements GeneratorInterface
         return $this->config;
     }
 
-
     /*
      * Singleton logic for backwards compatibility
      * TODO: v3: remove
@@ -494,6 +490,7 @@ class Generator implements GeneratorInterface
         if (static::$instance === null) {
             static::$instance = new static;
         }
+
         return static::$instance;
     }
 

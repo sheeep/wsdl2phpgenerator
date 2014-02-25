@@ -59,7 +59,7 @@ class OutputManager
      * Saves the service and types php code to file
      *
      * @param PhpClass $service
-     * @param array $types
+     * @param array    $types
      */
     public function save(PhpClass $service, array $types)
     {
@@ -161,8 +161,8 @@ class OutputManager
      * Checks if the class is approved
      * Removes the prefix and suffix for namechecking
      *
-     * @param PhpClass $class
-     * @return bool Returns true if the class is ok to add to file
+     * @param  PhpClass $class
+     * @return bool     Returns true if the class is ok to add to file
      */
     private function isValidClass(PhpClass $class)
     {

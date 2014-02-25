@@ -33,7 +33,7 @@ class ComplexType extends Type
      * Construct the object
      *
      * @param ConfigInterface $config The configuration
-     * @param string $name The identifier for the class
+     * @param string          $name   The identifier for the class
      */
     public function __construct(ConfigInterface $config, $name)
     {
@@ -120,7 +120,7 @@ class ComplexType extends Type
      *
      * @param string $type
      * @param string $name
-     * @param bool $nillable
+     * @param bool   $nillable
      */
     public function addMember($type, $name, $nillable)
     {

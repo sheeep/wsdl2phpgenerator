@@ -132,21 +132,21 @@ class Config implements ConfigInterface
      *
      * @param string $inputFile
      * @param string $outputDir
-     * @param bool $verbose
-     * @param bool $oneFile
-     * @param bool $classExists
-     * @param bool $noTypeConstructor
+     * @param bool   $verbose
+     * @param bool   $oneFile
+     * @param bool   $classExists
+     * @param bool   $noTypeConstructor
      * @param string $namespaceName
-     * @param array $optionsFeatures
+     * @param array  $optionsFeatures
      * @param string $wsdlCache
      * @param string $compression
      * @param string $classNames
      * @param string $prefix
      * @param string $suffix
-     * @param bool $sharedTypes
-     * @param bool $createAccessors
-     * @param bool $constructorParamsDefaultToNull
-     * @param bool $noIncludes
+     * @param bool   $sharedTypes
+     * @param bool   $createAccessors
+     * @param bool   $constructorParamsDefaultToNull
+     * @param bool   $noIncludes
      */
     public function __construct($inputFile, $outputDir, $verbose = false, $oneFile = false, $classExists = false, $noTypeConstructor = false, $namespaceName = '', $optionsFeatures = array(), $wsdlCache = '', $compression = '', $classNames = '', $prefix = '', $suffix = '', $sharedTypes = false, $createAccessors = false, $constructorParamsDefaultToNull = false, $noIncludes = false)
     {
